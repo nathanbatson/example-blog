@@ -1,0 +1,8 @@
+#posts
+  - for post in @posts
+    .post
+      %h2
+        = post.title
+      = post.content.html_safe
+      %p.small
+        = post.name

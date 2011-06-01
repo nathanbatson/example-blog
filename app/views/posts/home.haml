@@ -1,0 +1,10 @@
+%p
+  Welcome to my fancy example blog and it's designed to show you all the cool features of SASS and HAML as well as rails 3. Click the following links if you want to learn more about <a href="http://edgeguides.rubyonrails.org/getting_started.html">Rails</a>, <a href="http://sass-lang.com/tutorial.html">SASS</a> and <a href="http://haml-lang.com/tutorial.html">HAML</a>.
+
+#posts
+  .post
+    %h2
+      = @post.title
+    = @post.content.html_safe
+    %p.small
+      = @post.name

@@ -1,7 +1,7 @@
 ExampleBlog::Application.routes.draw do
-  # get "home/index"
+  resources :posts
   
-  root :to => "home#index"
+  root :to => "posts#home"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

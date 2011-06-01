@@ -7,8 +7,31 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<div id="header-wrap">
+	  <div id="header">
+	    <a href="/" id="logo"><img src="/images/logo.png" title="blog logo" alt="blog"/></a>
+	    <div id="navigation">
+	      <%= render(:partial => "shared/navigation") %>
+	    </div>
+	  </div>
+	</div>
 
-<%= yield %>
+	<div id="content-wrap">
+	  <div id="content">
+	    <%= yield %>
+	  </div>
+	</div>
 
+	<div id="footer-wrap">
+	  <div id="footer">
+	    <div class="right">
+	      <h4>Follow This Blog</h4>
+	      <p class="follow"><a target="_blank" href="#">Twitter</a></p>
+	      <p class="follow"><a target="_blank" href="#">Facebook</a></p>
+	      <p class="follow"><a target="_blank" href="#">RSS</a></p>
+	      <p class="copyright">&copy; This Blog <%= Date.today.year %></p>
+	    </div>
+	  </div>
+	</div>
 </body>
 </html>
